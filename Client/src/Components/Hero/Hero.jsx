@@ -71,7 +71,7 @@ const Hero = () => {
       <div className="absolute bottom-1 right-4 z-10 text-white animate-bounce flex flex-col gap-2 ">
         <p className="flex justify-center items-center gap-2">
           <span className="bg-primary_yellow rounded-md text-white py-1 px-2 text-[11px] cursor-pointer">Request a Quote</span>
-          <TiMessages className="hover:text-blue-500 cursor-pointer bg-primary_yellow p-2 rounded-full" size={40}/></p>
+          <TiMessages className="hover:text-gray-200 cursor-pointer bg-primary_yellow p-2 rounded-full" size={50}/></p>
         
         
       </div>

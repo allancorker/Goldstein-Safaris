@@ -9,7 +9,7 @@ export default {
       colors: {
         primary_yellow: '#EA962E',
         primary_gray: '#1c1c1c',
-        secondary_gray: '#282826',
+        secondary_gray: '#F6F6FA',
         secondary_white: '#f5f5f5',
       },
       fontFamily: {
