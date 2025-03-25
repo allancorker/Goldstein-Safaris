@@ -79,7 +79,7 @@ const Footer = () => {
 
         <div className="my-6 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} JTours Company. All rights reserved.</p>
-          <p>Designed and Powered by <span className="text-blue-500 hover:cursor-pointer hover:text-blue-400 transition duration-300">YOUVILAB</span></p>
+          <p>Designed and Powered by <a href="https://youvilab.vercel.app/" className="text-blue-500 hover:cursor-pointer hover:text-blue-400 transition duration-300">YOUVILAB</a></p>
         </div>
       </div>
     </footer>
