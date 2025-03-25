@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaPhone, FaXTwitter } from 'react-icons/fa6'
 
 const Topnav = () => {
     return (
-        <div className='flex justify-between items-center text-sm  bg-primary_yellow text-white px-8'>
+        <div className='md:flex justify-between items-center text-sm hidden   bg-primary_yellow text-white px-8'>
 
             <div className='flex justify-center items-center gap-4'>
                 <p className='bl-2'>JTours,Kenya's leading Tour and Travel Company</p>
