@@ -22,7 +22,7 @@ const Footer = () => {
 
             <div className="mb-4">
               <img src={logo} alt="logo" className="max-h-16" />
-              <h1 className="text-xl font-bold">JJtours Company</h1>
+              <h1 className="text-xl font-bold">Goldstein Safaris </h1>
               <p className="text-sm text-primary_gray">
                 Discover. Explore. Experience.
               </p>
@@ -36,10 +36,11 @@ const Footer = () => {
               </p>
               <a href="tel:+254743739212" className="flex items-center text-primary_gray hover:text-gray-100 cursor-pointer transition duration-300">
                 <FaPhone size={16} className="mr-2 text-white" />
-                +254796871876
+                +254716621762
               </a>
               <a href="mailto:info@wanderlustjourneys.com" className="flex items-center text-primary_gray hover:text-gray-100 cursor-pointer transition duration-300">
-                <BiEnvelope size={20} className="mr-2 text-blue-600" />
+                <BiEnvelope size={20} className="mr-2 text-blue-600" /> 
+                info@goldsteinsafaris.com
                 
               </a>
             </div>
@@ -78,8 +79,7 @@ const Footer = () => {
         </div>
 
         <div className="my-6 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} JTours Company. All rights reserved.</p>
-          <p>Designed and Powered by <a href="https://youvilab.vercel.app/" className="text-blue-500 hover:cursor-pointer hover:text-blue-400 transition duration-300">YOUVILAB</a></p>
+          <p>&copy; {new Date().getFullYear()} Goldstein Safaris Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

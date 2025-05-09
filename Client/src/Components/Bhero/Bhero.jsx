@@ -6,7 +6,7 @@ import tour3 from "../../assets/tour3.jpeg";
 const Bhero = () => {
     return (
         <div className="py-10 min-h-[40vh] px-6 md:px-16 flex flex-col items-center bg-gradient-to-b from-gray-100 via-white to-orange-300">
-            <h1 className="text-3xl md:text-4xl font-bold py-6">The JTours Difference</h1>
+            <h1 className="text-3xl md:text-4xl font-bold py-6">The Goldstein Safaris Difference</h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl">
                 {[ 

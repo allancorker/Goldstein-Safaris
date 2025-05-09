@@ -6,8 +6,8 @@ const Topnav = () => {
         <div className='md:flex justify-between items-center text-sm hidden   bg-primary_yellow text-white px-8'>
 
             <div className='flex justify-center items-center gap-4'>
-                <p className='bl-2'>JTours,Kenya's leading Tour and Travel Company</p>
-                <p className='flex border-l-2 cursor-pointer hover:opacity-90 border-white pl-1 justify-center items-center'><FaPhone />+254796871876</p>
+                <p className='bl-2'>Goldstein Safaris,Kenya's leading Tour and Travel Company</p>
+                <p className='flex border-l-2 cursor-pointer hover:opacity-90 border-white pl-1 justify-center items-center'><FaPhone />+254716621762</p>
                 <p className='flex border-l-2 cursor-pointer hover:opacity-90 border-white pl-1 justify-center gap-1 items-center'><FaFacebook />
                     <FaXTwitter />
                     <FaInstagram />
