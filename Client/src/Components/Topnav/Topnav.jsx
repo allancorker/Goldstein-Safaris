@@ -14,7 +14,9 @@ const Topnav = () => {
                 </p>
             </div>
             <div>
-                <button className='bg-white  text-primary_gray px-4 animate-pulse py-2'>Contact</button>
+                <button className='bg-white  text-primary_gray px-4 animate-pulse py-2'>
+                    <a href="/contact">Contact</a>
+                </button>
             </div>
         </div>
     )

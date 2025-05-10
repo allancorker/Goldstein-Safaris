@@ -12,6 +12,10 @@ import Destinations from './Components/Destinations/Destinations';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Form from './Components/Form/Form';
 import ContactPlace from './Components/ContactPlace/ContactPlace';
+import Safari_Packages from './Pages/Safari Packages/Safari_Packages';
+import Themed_Holidays from './Pages/Themed Holidays/Themed_Holidays';
+import Local_Packages from './Pages/Local Packages/Local_Packages';
+import DestinationsP from './Pages/Destinations/DestinationsP';
 
 const Home = () => (
   <>
@@ -33,8 +37,11 @@ export const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Form />} />
-        <Route path="/locations" element={<ContactPlace />} />
+        <Route path='/destinations' element={<DestinationsP/>}/>
+        <Route path='/safari_packages' element={<Safari_Packages/>}/>
+        <Route path='/themed_holidays' element={<Themed_Holidays/>}/>
+        <Route path='/local_packages' element={<Local_Packages/>}/>
+        <Route path="/contact" element={<><Form /> <ContactPlace/></>} />
       </Routes>
 
       <Footer />

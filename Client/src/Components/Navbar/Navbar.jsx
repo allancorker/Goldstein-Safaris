@@ -61,11 +61,21 @@ const Navbar = () => {
                     </div>
 
                     <ul className="flex gap-6 text-md text-gray-800 font-medium">
-                        <li className="cursor-pointer hover:text-primary_yellow transition-all">Home</li>
-                        <li className="cursor-pointer hover:text-primary_yellow transition-all">Destinations</li>
-                        <li className="cursor-pointer hover:text-primary_yellow transition-all">Safari Packages</li>
-                        <li className="cursor-pointer hover:text-primary_yellow transition-all">Themed Holidays</li>
-                        <li className="cursor-pointer hover:text-primary_yellow transition-all">Local Packages</li>
+                        <li className="cursor-pointer hover:text-primary_yellow transition-all">
+                            <a href="/">Home</a>
+                        </li>
+                        <li className="cursor-pointer hover:text-primary_yellow transition-all">
+                            <a href="/destinations">Destinations</a>
+                        </li>
+                        <li className="cursor-pointer hover:text-primary_yellow transition-all">
+                            <a href="/safari_packages">Safari Packages</a>
+                        </li>
+                        <li className="cursor-pointer hover:text-primary_yellow transition-all">
+                            <a href="/local_packages">Local Packages</a>
+                        </li>
+                        <li className="cursor-pointer hover:text-primary_yellow transition-all">
+                            <a href="/themed_holidays">Themed Holidays</a>
+                        </li>
                     </ul>
                 </div>
             </div>
