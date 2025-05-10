@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Hero from "../../Components/Hero/Hero";
 import Masai_Mara from "../../assets/Safari-Masai-Mara.jpg";
 import Diani_Beach from "../../assets/Diani-Beach.jpg";
@@ -53,6 +53,13 @@ const destinations = [
 ];
 
 const DestinationsP = () => {
+  const destinationSectionRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll to destination section on page load
+    destinationSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
     <div>
       {/* Hero section */}
@@ -60,6 +67,7 @@ const DestinationsP = () => {
 
       {/* Header Section */}
       <section
+        ref={destinationSectionRef}
         className="relative bg-cover bg-center h-72 text-white flex items-center justify-center"
         style={{ backgroundImage: "url('/images/hero-destinations.jpg')" }}
       >
@@ -88,7 +96,9 @@ const DestinationsP = () => {
             />
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{place.name}</h3>
-              <p className="text-sm text-gray-600 mb-4">{place.description}</p>
+              <p className="text-sm text-gray-600 mb-4">
+                {place.description}
+              </p>
               <a
                 href={`${place.slug}`}
                 target="_blank"

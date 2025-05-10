@@ -84,7 +84,7 @@ export default function Form() {
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             <button className="border border-white hover:bg-white hover:text-primary_yellow hover:scale-105 transition-all duration-300 px-6 py-2 rounded-full font-semibold">
-              <Link to="">Start Your Journey</Link>
+              <Link to="/contact">Start Your Journey</Link>
             </button>
           </div>
         </div>

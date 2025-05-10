@@ -48,11 +48,11 @@ const Footer = () => {
             <div className="mt-6 sm:mt-0">
               <h1 className="text-xl font-semibold">Quick as</h1>
               <div className="flex flex-col text-primary_gray">
-                <a to="/" className="hover:text-gray-100 transition duration-300 cursor-pointer">Home</a>
-                <a to="/destinations" className="hover:text-gray-100 transition duration-300 cursor-pointer">Destinations</a>
-                <a to="/safari-packages" className="hover:text-gray-100 transition duration-300 cursor-pointer">Safari Packages</a>
-                <a to="/themed-holidays" className="hover:text-gray-100 transition duration-300 cursor-pointer">Themed Holidays</a>
-                <a to="/local-packages" className="hover:text-gray-100 transition duration-30 cursor-pointer0">Local Packages</a>
+                <a href="/" className="hover:text-gray-100 transition duration-300 cursor-pointer">Home</a>
+                <a href="/destinations" className="hover:text-gray-100 transition duration-300 cursor-pointer">Destinations</a>
+                <a href="/safari_packages" className="hover:text-gray-100 transition duration-300 cursor-pointer">Safari Packages</a>
+                <a href="/themed_holidays" className="hover:text-gray-100 transition duration-300 cursor-pointer">Themed Holidays</a>
+                <a href="/local_packages" className="hover:text-gray-100 transition duration-30 cursor-pointer0">Local Packages</a>
               </div>
             </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Hero from "../../Components/Hero/Hero";
 import MasaiMaraSafari from '../../assets/Mara-Safari.webp';
 import AmboseliSafari from '../../assets/Amboseli-Safari.jpg';
@@ -45,6 +45,11 @@ const safariPackages = [
 
 const SafariPackages = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    contentRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   const toggleDetails = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -57,13 +62,14 @@ const SafariPackages = () => {
 
       {/* Header */}
       <section
+        ref={contentRef}
         className="relative bg-cover bg-center h-72 text-white flex items-center justify-center"
         style={{ backgroundImage: "url('/images/hero-safari-packages.jpg')" }}
       >
         <div className="bg-primary_yellow p-8 rounded">
           <h1 className="text-4xl font-bold text-center">Safari Packages</h1>
           <p className="text-center mt-2 text-lg">
-            Explore Kenya’s wild beauty with our curated safari experiences.
+            Explore Kenya's wild beauty with our curated safari experiences.
           </p>
         </div>
       </section>
@@ -71,7 +77,10 @@ const SafariPackages = () => {
       {/* Safari Packages Grid */}
       <section className="py-10 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {safariPackages.map((pkg, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300 ease-in-out">
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition duration-300 ease-in-out"
+          >
             <img
               src={pkg.image}
               alt={pkg.title}

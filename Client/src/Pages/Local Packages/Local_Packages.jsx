@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Hero from "../../Components/Hero/Hero";
 import NairobiTour from "../../assets/NairobiToour.webp";
 import HellsGate from "../../assets/Hells-Gate.jpg";
 import LakeNaivasha from "../../assets/Lake-Naivasha.jpg";
 import Kiambethu_Tea from "../../assets/Kiambethu_Tea.png";
 import Ol_Pejeta from "../../assets/Ol-Pejeta-Conservancy.jpg";
-import Ngong_Hills from "../../assets/Ngong-Hiking.jpg"
+import Ngong_Hills from "../../assets/Ngong-Hiking.jpg";
 
 const localPackages = [
   {
@@ -40,32 +40,44 @@ const localPackages = [
   },
   {
     title: "Kiambethu Tea Farm Tour",
-    description: "Step into colonial history and enjoy fresh air, tea tasting, and scenic garden walks at Limuru's famous tea estate.",
+    description:
+      "Step into colonial history and enjoy fresh air, tea tasting, and scenic garden walks at Limuru's famous tea estate.",
     image: Kiambethu_Tea,
     price: "Ksh 4,500 per person (inclusive of lunch and guided tour).",
     duration: "Half-day (Approx. 5 hours)",
-    details: "Learn about tea production and colonial history from one of Kenya's oldest tea farms. Enjoy a peaceful walk through indigenous forest and gardens. Tea tasting session and a delicious farm-to-table lunch included"
+    details:
+      "Learn about tea production and colonial history from one of Kenya's oldest tea farms. Enjoy a peaceful walk through indigenous forest and gardens. Tea tasting session and a delicious farm-to-table lunch included",
   },
   {
     title: "Ol Pejeta Conservancy Day Trip",
-    description: "Visit East Africa's largest black rhino sanctuary, meet the last two northern white rhinos, and enjoy a game drive.",
+    description:
+      "Visit East Africa's largest black rhino sanctuary, meet the last two northern white rhinos, and enjoy a game drive.",
     image: Ol_Pejeta,
-    price: "From Ksh 9,000 per person (inclusive of transport, park fees, and lunch).",
+    price:
+      "From Ksh 9,000 per person (inclusive of transport, park fees, and lunch).",
     duration: "Full-day (approx. 8-10 hours)",
-    details: "Explore a premier wildlife conservancy in Laikipia, Home to the Big Five and the last two northern white rhinos. Optional activities include chimpanzee sanctuary visit, game drives, and lunch at Morani's"
+    details:
+      "Explore a premier wildlife conservancy in Laikipia, Home to the Big Five and the last two northern white rhinos. Optional activities include chimpanzee sanctuary visit, game drives, and lunch at Morani's",
   },
   {
     title: "Ngong Hills Hiking Experience",
-    description: "Trek along the rolling ridges of Ngong Hills with breathtaking views and a refreshing outdoor adventure close to Nairobi.",
+    description:
+      "Trek along the rolling ridges of Ngong Hills with breathtaking views and a refreshing outdoor adventure close to Nairobi.",
     image: Ngong_Hills,
     price: "From Ksh 2,000 per person ",
     duration: "Half-day (approx. 4-6 hours)",
-    details: "Popular hiking trail just outside Nairobi, Sweeping views of the Great Rift Valley and city skyline. Ideal for nature lovers and outdoor enthusiasts. Package includes transport, park fees, and a picnic lunch."
-  }  
+    details:
+      "Popular hiking trail just outside Nairobi, Sweeping views of the Great Rift Valley and city skyline. Ideal for nature lovers and outdoor enthusiasts. Package includes transport, park fees, and a picnic lunch.",
+  },
 ];
 
 const LocalPackages = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    contentRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   const toggleDetails = (index) => {
     setExpandedIndex(index === expandedIndex ? null : index);
@@ -73,11 +85,11 @@ const LocalPackages = () => {
 
   return (
     <div>
-      {/* Hero Section */}
       <Hero />
 
-      {/* Intro Header */}
+      {/* Header */}
       <section
+        ref={contentRef}
         className="relative bg-cover bg-center h-72 text-white flex items-center justify-center"
         style={{ backgroundImage: "url('/images/hero-local-packages.jpg')" }}
       >
@@ -92,7 +104,7 @@ const LocalPackages = () => {
         </div>
       </section>
 
-      {/* Packages Grid */}
+      {/* Packages */}
       <section className="py-10 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {localPackages.map((pkg, index) => (
           <div
@@ -135,7 +147,7 @@ const LocalPackages = () => {
       <section className="bg-pink-50 text-primary_yellow text-center py-10">
         <h2 className="text-2xl font-bold">Looking for Custom Packages?</h2>
         <p className="mt-2">
-          Let us tailor a local experience just for you. Reach out and let’s
+          Let us tailor a local experience just for you. Reach out and let's
           plan together.
         </p>
         <a
